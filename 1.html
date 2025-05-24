@@ -41,9 +41,14 @@
     </style>
     <script>
         function redirect() {
-            window.location.href = "1.pdf"; // استبدل هذا بالرابط الذي تريد التحميل إليه
+            const link = document.createElement('a');
+            link.href = '1.pdf'; // استبدل هذا باسم ملف PDF الذي تريد تحميله
+            link.download = '1.pdf'; // اسم الملف عند التحميل
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
-        setTimeout(redirect, 10000); // 3000 مللي ثانية (3 ثواني)
+        setTimeout(redirect, 10000); // 10000 مللي ثانية (10 ثواني)
     </script>
 </head>
 <body>
