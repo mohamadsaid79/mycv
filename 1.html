@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل تلقائي</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: #4a90e2; /* لون خلفية جذاب */
+            margin: 0;
+        }
+        #container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        #message {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #loader {
+            border: 5px solid #f3f3f3; /* لون خلفية الدائرة */
+            border-top: 5px solid #3498db; /* لون الجزء العلوي */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite; /* حركة الدوران */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <script>
+        function redirect() {
+            window.location.href = "1.pdf"; // استبدل هذا بالرابط الذي تريد التحميل إليه
+        }
+        setTimeout(redirect, 10000); // 3000 مللي ثانية (3 ثواني)
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="message">جاري التحميل... يرجى الانتظار.</div>
+        <div id="loader"></div>
+    </div>
+</body>
+</html>
